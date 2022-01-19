@@ -1,0 +1,172 @@
+.ranking-lista {
+  width: 600px;
+}
+
+.ranking-lista span {
+  color: #25b783;
+}
+
+/* colocar borda no texto: https://www.cupcom.com.br/aprendendo-css/2-formas-de-colocar-borda-em-texto-com-css.html#:~:text=A%20propriedade%20text%2Dshadow%20acrescenta,borda%20em%20volta%20do%20texto. */
+.ranking-div h1 {
+  font-size: 50px;
+  color: #25b783;
+     -webkit-text-stroke: 1px #C638DB;
+      text-stroke: 1px #C638DB;
+}
+
+.ranking-jogador {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 40px;
+
+  margin: 10px 10px 10px 10px;
+
+  border-width: 6px;
+  border-style: groove;
+  border-color: #25b783;
+
+  background-color: #050505;
+}
+
+.ranking-foto {
+  border-radius: 50%;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.ranking-div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.ranking-section {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  margin-top: -40px;
+}
+
+.tamanho-ranking {
+  width: 40px;
+  display: flex;
+}
+
+
+/* Fonte do botão: https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda */
+
+.ranking-botao {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #C638DB;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+
+  width: 100px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.ranking-botao:hover {
+  background: #25B783;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #C638DB,
+              0 0 25px #C638DB,
+              0 0 50px #C638DB,
+              0 0 100px #C638DB;
+}
+
+.ranking-botao span {
+  position: absolute;
+  display: block;
+}
+
+.ranking-botao span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #25B783);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.ranking-botao span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #25B783);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.ranking-botao span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #25B783);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.ranking-botao span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #25B783);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
