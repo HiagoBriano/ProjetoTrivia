@@ -211,7 +211,6 @@ class Questions extends Component {
               </button>
             </section>
           )}
-
         <section>
           { timer }
         </section>
