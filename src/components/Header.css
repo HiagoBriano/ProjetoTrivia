@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Permanent+Marker&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0px 30px 0px;
+  align-items: center;
+
+  background: linear-gradient(to bottom,#000000, #4d4c4c, #000000);
+}
+
+#header img {
+  border-radius: 50%;
+}
+
+.player-header, .ponto-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.player-header h2, .ponto-header h2 {
+  font-size: 25px;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  margin: 0px 0px 0px 0px;
+  color: #24B480;
+}
+
+.player-header h4, .ponto-header h4 {
+  font-size: 20px;
+  font-family: 'Dongle', sans-serif;
+  margin: 0px 0px 0px 0px;
+  color: #BD1CD9;
+}
