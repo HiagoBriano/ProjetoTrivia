@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Header from '../../components/Header';
+import './Feedback.css';
 
 class Feedback extends Component {
   componentDidMount() {
@@ -36,19 +37,20 @@ class Feedback extends Component {
     return (
       <div>
         <Header />
-        <section>
+        <section className="feedback-box">
           {
             assertions >= validation
-              ? (<h2 data-testid="feedback-text">Well Done!</h2>)
-              : (<h2 data-testid="feedback-text">Could be better...</h2>)
+              ? (<h2 data-testid="feedback-text" className="title">Well Done!</h2>)
+              : (<h2 data-testid="feedback-text" className="title">Could be better...</h2>)
           }
-          <label htmlFor="pontuação">
+          <label htmlFor="pontuação" className="score">
             Pontuação
             <h2 data-testid="feedback-total-score" id="pontuação">
               { score }
             </h2>
           </label>
-          <label htmlFor="Acertos">
+          <label htmlFor="Acertos" className="score">
+            Acertos
             <h2 data-testid="feedback-total-question" id="Acertos">
               { assertions }
             </h2>
@@ -56,18 +58,28 @@ class Feedback extends Component {
         </section>
         <section>
           <button
+            className="botao"
             type="button"
             data-testid="btn-play-again"
             onClick={ () => history.push('/') }
           >
+            <span/>
+            <span/>
+            <span/>
+            <span/>
             Play Again
           </button>
         </section>
         <button
+          className="botao"
           data-testid="btn-ranking"
           type="button"
           onClick={ () => (history.push('/ranking')) }
         >
+           <span/>
+           <span/>
+           <span/>
+           <span/>
           Ranking
         </button>
       </div>
