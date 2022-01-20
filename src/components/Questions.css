@@ -8,6 +8,7 @@
   border: 3px solid red;
 }
 
+/* https://www.codingnepalweb.com/circular-progress-bar-html-css-javascript/ */
 .circular {
   height: 100px;
   width: 100px;
@@ -121,19 +122,18 @@
 }
 
 .danger {
-  stroke: rgb(243, 17, 28);
   animation: pulse 0.9s ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%,
   100% {
-    transform: rotate(-90deg) scale(1);
+    transform: rotate(360deg) scale(1);
   }
   50% {
-    transform: rotate(-90deg) scale(1.05);
+    transform: rotate(360deg) scale(1.05);
   }
   75% {
-    transform: rotate(-90deg) scale(0.8);
+    transform: rotate(360deg) scale(0.8);
   }
 }

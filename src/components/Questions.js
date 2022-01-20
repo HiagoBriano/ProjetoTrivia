@@ -212,14 +212,15 @@ class Questions extends Component {
             </section>
           )}
 
-        <div class="circular">
-          <div class="inner"></div>
-          <div class="outer"></div>
-          <div class="numb">
-            {`${timer}s`}
-          </div>
-          {timer <= 30 && timer && !resposta> 0
-            ? (
+
+        {timer <= 30 && timer && !resposta
+          ? (
+            <div class="circular">
+              <div class="inner"></div>
+              <div class="outer"></div>
+              <div class="numb">
+                {`${timer}s`}
+              </div>
               <div class="circle">
                 <div class="dot">
                   <span></span>
@@ -231,12 +232,19 @@ class Questions extends Component {
                   <div class="progress"></div>
                 </div>
               </div>
-            ) : (
-              <p>''</p>
-            )
-          }
+            </div>
+          ) : (
+            <div class="circular danger">
+              <div class="inner"></div>
+              <div class="outer"></div>
+              <div class="numb">
+                {`${timer}s`}
+              </div>
+            </div>
+          )
 
-        </div>
+        }
+
       </section>
     );
   }
