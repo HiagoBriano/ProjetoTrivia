@@ -144,7 +144,7 @@ class Questions extends Component {
         <section data-testid="answer-options">
           {misturado.map((item, index) => (
             <button
-              key={ index }
+              key={index}
               type="button"
               name={
                 item.certa ? validation : `wrong-answer-${index}`
@@ -152,8 +152,8 @@ class Questions extends Component {
               data-testid={
                 item.certa ? validation : `wrong-answer-${index}`
               }
-              disabled={ btnDisabled }
-              className={ resposta ? item.classe : '' }
+              disabled={btnDisabled}
+              className={resposta ? item.classe : ''}
               onClick={
                 (e) => this.answerSelected(e)
               }
@@ -205,15 +205,46 @@ class Questions extends Component {
               <button
                 type="button"
                 data-testid="btn-next"
-                onClick={ this.nextQuestion }
+                onClick={this.nextQuestion}
               >
                 Next
               </button>
             </section>
           )}
-        <section>
-          { timer }
-        </section>
+
+
+        {timer <= 30 && timer && !resposta
+          ? (
+            <div class="circular">
+              <div class="inner"></div>
+              <div class="outer"></div>
+              <div class="numb">
+                {`${timer}s`}
+              </div>
+              <div class="circle">
+                <div class="dot">
+                  <span></span>
+                </div>
+                <div class="bar left">
+                  <div class="progress"></div>
+                </div>
+                <div class="bar right">
+                  <div class="progress"></div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div class="circular danger">
+              <div class="inner"></div>
+              <div class="outer"></div>
+              <div class="numb">
+                {`${timer}s`}
+              </div>
+            </div>
+          )
+
+        }
+
       </section>
     );
   }
