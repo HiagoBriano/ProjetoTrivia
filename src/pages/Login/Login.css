@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+.login {
+  width: inherit;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+.login--logo {
+  width: 600px;
+}
+
+.login--container {
+  border: none;
+  border-radius: 5px;
+  background-color: #121314;
+  min-width: 400px;
+  padding: 50px;
+  -webkit-box-shadow: 1px 2px 20px 6px #121314; 
+  box-shadow: 1px 2px 20px 6px #121314;
+}
+
+.login--form-group {
+  margin-bottom: 1em;
+  transition: all .3s;
+}
+
+.login--form-label {
+  font-size: 1em;
+  color: #aaa;
+  display: block;
+  opacity: 1;
+  transform: translateY(-1.40em);
+  transform-origin: 0 0;
+  transition: all .3s;
+  cursor: text;
+}
+
+.login--form-control {
+  box-shadow: none;
+  background-color: rgba(0,0,0,.02);
+  border-radius: 0;
+  border-color: #33ECB8;
+  color: white;
+  border-style: none none solid none;
+  width: 100%;
+  transition: all .5s;
+  padding: 5px;
+  cursor: text;
+}
+
+.login--form-control::placeholder {
+  color: transparent;
+}
+
+.login--form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #C638DB;
+}
+
+/* o + significa "adjacente" */
+.login--form-control:focus + .login--form-label,
+.login--form-control:not(:placeholder-shown) + .login--form-label {
+  transform: translateY(-2.5em) scale(.8);
+}
+
+.login--form-group:focus-within {
+  transform: scale(1.05, 1.05);
+}
+
+/* Fonte do botão: https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda */
+
+.login--button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background: none;
+
+  width: 100px;
+  margin-top: -10px;
+}
+
+.login-button:enabled {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px white;
+}
+
+.login--button:hover:enabled {
+  background: #25B783;
+  color: #C638DB;
+  font-weight: bolder;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #C638DB,
+              0 0 25px #C638DB,
+              0 0 50px #C638DB,
+              0 0 100px #C638DB;
+}
+
+.login--button span {
+  position: absolute;
+  display: block;
+}
+
+.login--button:enabled span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #25B783);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login--button:enabled span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #25B783);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login--button:enabled span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #25B783);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login--button:enabled span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #25B783);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+.login--config-btn {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+}
+
+.login--config-btn:hover {
+  opacity: .8;
+  cursor: pointer;
+}

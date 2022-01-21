@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { getToken, getUser } from '../../redux/actions';
 import { requestTriviaApi } from '../../services/triviApi';
 import logo from '../../trivia-01.png';
+import './Login.css';
+import configBtn from './engrenagem3.svg';
 
 class Login extends Component {
   constructor(props) {
@@ -48,13 +50,16 @@ class Login extends Component {
     const { history } = this.props;
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={ logo } className="App-logo" alt="logo" />
-          <form>
-            <label htmlFor="player-name">
-              Nome do jogador:
+      <div className="login">
+        <header className="login--header">
+          <img src={ logo } className="login--logo" alt="logo" />
+        </header>
+        <main className="login--container">
+          <form className="login--form">
+            <div className="login--form-group">
               <input
+                className="login--form-control"
+                placeholder="username"
                 type="text"
                 id="player-name"
                 name="playerName"
@@ -62,10 +67,15 @@ class Login extends Component {
                 value={ playerName }
                 onChange={ (event) => this.onChangeHandler(event.target) }
               />
-            </label>
-            <label htmlFor="player-email">
-              E-mail do jogador:
+              <label htmlFor="player-name" className="login--form-label">
+                Nome do jogador
+              </label>
+            </div>
+            
+            <div className="login--form-group">
               <input
+                className="login--form-control"
+                placeholder="e-mail"
                 type="text"
                 id="player-email"
                 name="playerEmail"
@@ -73,26 +83,37 @@ class Login extends Component {
                 value={ playerEmail }
                 onChange={ (event) => this.onChangeHandler(event.target) }
               />
-            </label>
+              <label htmlFor="player-email" className="login--form-label">
+                E-mail do jogador
+              </label>
+            </div>
+
             <button
               type="button"
+              className="login--button"
               data-testid="btn-play"
               disabled={ btnDisabled }
               onClick={ () => {
                 this.onClickHandler();
               } }
             >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
               Play
             </button>
+
             <button
+              className="login--config-btn"
               type="button"
               data-testid="btn-settings"
               onClick={ () => (history.push('/config')) }
             >
-              Configuração
+              <img src={ configBtn } alt="configuração" title="Configurações" />
             </button>
           </form>
-        </header>
+        </main>
       </div>
     );
   }
