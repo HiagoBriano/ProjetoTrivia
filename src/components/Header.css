@@ -1,35 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Permanent+Marker&family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('http://fonts.cdnfonts.com/css/open-24-display-st');
 
 #header {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 20px 0px 30px 0px;
-  align-items: center;
-
-  background: linear-gradient(to bottom,#000000, #4d4c4c, #000000);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 112px;
+    height: 108px;
+    background-image: url('../img/header-background.png');
+    background-size: cover;
+    grid-area: header;
 }
 
-#header img {
-  border-radius: 50%;
-}
-
-.player-header, .ponto-header {
+.name-and-score {
+  height: 108px;
+  width: 492px;
+  background-image: url('../img/token-viewer-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  padding: 24px;
+  border-radius: 28px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.player-header h2, .ponto-header h2 {
-  font-size: 25px;
-  font-family: 'Mochiy Pop P One', sans-serif;
-  margin: 0px 0px 0px 0px;
-  color: #24B480;
+/* .name-and-score-internal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+} */
+
+.name-and-score section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
-.player-header h4, .ponto-header h4 {
-  font-size: 20px;
-  font-family: 'Dongle', sans-serif;
-  margin: 0px 0px 0px 0px;
-  color: #BD1CD9;
+.name-and-score p {
+  background: rgba(0,0,0,.4);
+  border-radius: 2px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: "open 24 display st",sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: .8em;
+  text-shadow: 0 0 21px #fff, 0 0 15px #fff;
+}
+
+.image-user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  border-radius: 50%;
 }

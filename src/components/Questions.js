@@ -219,7 +219,7 @@ class Questions extends Component {
               <div class="inner"></div>
               <div class="outer"></div>
               <div class="numb">
-                {`${timer}s`}
+                {timer}
               </div>
               <div class="circle">
                 <div class="dot">
@@ -238,7 +238,7 @@ class Questions extends Component {
               <div class="inner"></div>
               <div class="outer"></div>
               <div class="numb">
-                {`${timer}s`}
+                {timer}
               </div>
             </div>
           )
