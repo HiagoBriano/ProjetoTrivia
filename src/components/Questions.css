@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url('http://fonts.cdnfonts.com/css/open-24-display-st');
 
 .buttonGreen {
   border: 3px solid rgb(6, 240, 15);
@@ -13,6 +14,7 @@
   height: 100px;
   width: 100px;
   position: relative;
+  font-family: "open 24 display st",sans-serif;
 }
 .circular .inner,
 .circular .outer,
@@ -44,7 +46,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  font-size: 20px;
+  font-size: 35px;
   font-weight: 500;
   color: #4158d0;
 }

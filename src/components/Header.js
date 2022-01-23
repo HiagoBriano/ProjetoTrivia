@@ -15,19 +15,19 @@ class Header extends Component {
     const imageUrl = `https://www.gravatar.com/avatar/${hash}`;
     return (
       <div id="header">
-        <img
+        <img className="image-user"
           data-testid="header-profile-picture"
-          src={ imageUrl }
+          src={imageUrl}
           alt="Imagem do jogador"
         />
-        <div className="player-header">
-          <h4><center>Jogador:</center></h4>
-          <h2 data-testid="header-player-name">{ userName }</h2>
-        </div>
-        <div className="ponto-header">
-          <h4><center>Pontos:</center></h4>
-          <h2 data-testid="header-score"><center>{score}</center></h2>
-        </div>
+        <section className="name-and-score">
+          <section className="name-and-score-internal">
+            <div className="player-score-header">
+              <p>Jogador: {userName} </p>
+              <p>Pontos: {score} </p>
+            </div>
+          </section>
+        </section>
       </div>
     );
   }
