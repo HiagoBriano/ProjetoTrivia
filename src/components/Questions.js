@@ -199,6 +199,39 @@ class Questions extends Component {
     return (
       <section>
         <section class="container">
+          <section class="position-circular">
+            {timer <= 30 && timer && !resposta
+              ? (
+                <div class="circular">
+                  <div class="inner"></div>
+                  <div class="outer"></div>
+                  <div class="numb">
+                    {timer}
+                  </div>
+                  <div class="circle">
+                    <div class="dot">
+                      <span></span>
+                    </div>
+                    <div class="bar left">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="bar right">
+                      <div class="progress"></div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div class="circular danger">
+                  <div class="inner"></div>
+                  <div class="outer"></div>
+                  <div class="numb">
+                    {timer}
+                  </div>
+                </div>
+              )
+            }
+          </section>
+
           {!haveOptions
             ? (<p>Carregando</p>)
             : (
@@ -214,43 +247,14 @@ class Questions extends Component {
                 data-testid="btn-next"
                 onClick={this.nextQuestion}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Next
               </button>
             )}
         </section>
-
-
-        {timer <= 30 && timer && !resposta
-          ? (
-            <div class="circular">
-              <div class="inner"></div>
-              <div class="outer"></div>
-              <div class="numb">
-                {timer}
-              </div>
-              <div class="circle">
-                <div class="dot">
-                  <span></span>
-                </div>
-                <div class="bar left">
-                  <div class="progress"></div>
-                </div>
-                <div class="bar right">
-                  <div class="progress"></div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div class="circular danger">
-              <div class="inner"></div>
-              <div class="outer"></div>
-              <div class="numb">
-                {timer}
-              </div>
-            </div>
-          )
-
-        }
 
       </section>
     );
