@@ -157,6 +157,7 @@ class Questions extends Component {
               onClick={
                 (e) => this.answerSelected(e)
               }
+              id='botao-questions'
             >
               {item.resposta}
             </button>
@@ -196,6 +197,22 @@ class Questions extends Component {
 
     return (
       <section className="page-game">
+        {!haveOptions
+          ? (<p>Carregando</p>)
+          : (this.renderAnswers())}
+        {resposta
+          && (
+            <section>
+              <button
+                type="button"
+                data-testid="btn-next"
+                onClick={this.nextQuestion}
+              >
+                Next
+              </button>
+            </section>
+          )}
+          <center>
         {timer <= 30 && timer && !resposta
           ? (
             <div class="circular">
@@ -225,24 +242,8 @@ class Questions extends Component {
               </div>
             </div>
           )
-
         }
-        {!haveOptions
-          ? (<p>Carregando</p>)
-          : (this.renderAnswers())}
-        {resposta
-          && (
-            <section>
-              <button
-                type="button"
-                data-testid="btn-next"
-                onClick={this.nextQuestion}
-              >
-                Next
-              </button>
-            </section>
-          )}
-
+        </center>
 
 
       </section>
