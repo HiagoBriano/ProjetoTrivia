@@ -22,10 +22,15 @@
 
 /* Fonte do botão: https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda */
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .botao {
     background-color: #282C34;
     position: relative;
-    display: inline-block;
+    display: flexbox;
     padding: 10px 40px;
     color: #C638DB;
     font-size: 16px;
@@ -38,7 +43,6 @@
   
     width: 200px;
     margin-top: -10px;
-    margin-left: 550px;
     cursor: pointer;
   }
   
