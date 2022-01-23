@@ -139,8 +139,8 @@ class Questions extends Component {
 
     return (
       <div className="pag-questions">
-        <h2 data-testid="question-category">{questions[counter].category}</h2>
-        <h3 data-testid="question-text">{questions[counter].question}</h3>
+        <h2 className="text" data-testid="question-category">{questions[counter].category}</h2>
+        <h3 className="text" data-testid="question-text">{questions[counter].question}</h3>
         <section data-testid="answer-options">
           {misturado.map((item, index) => (
             <button
@@ -195,24 +195,7 @@ class Questions extends Component {
     } = this.state;
 
     return (
-      <section>
-        {!haveOptions
-          ? (<p>Carregando</p>)
-          : (this.renderAnswers())}
-        {resposta
-          && (
-            <section>
-              <button
-                type="button"
-                data-testid="btn-next"
-                onClick={this.nextQuestion}
-              >
-                Next
-              </button>
-            </section>
-          )}
-
-
+      <section className="page-game">
         {timer <= 30 && timer && !resposta
           ? (
             <div class="circular">
@@ -244,6 +227,23 @@ class Questions extends Component {
           )
 
         }
+        {!haveOptions
+          ? (<p>Carregando</p>)
+          : (this.renderAnswers())}
+        {resposta
+          && (
+            <section>
+              <button
+                type="button"
+                data-testid="btn-next"
+                onClick={this.nextQuestion}
+              >
+                Next
+              </button>
+            </section>
+          )}
+
+
 
       </section>
     );

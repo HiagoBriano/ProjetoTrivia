@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
+.page-game {
+  display: block;
+  text-align: center;
+}
+
+.text {
+  color: #25B783;
+}
+
 .buttonGreen {
   border: 3px solid rgb(6, 240, 15);
 }
