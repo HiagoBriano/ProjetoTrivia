@@ -56,7 +56,7 @@ class Feedback extends Component {
             </h2>
           </label>
         </section>
-        <section>
+        <section className="button-container">
           <button
             className="botao"
             type="button"
@@ -69,19 +69,19 @@ class Feedback extends Component {
             <span/>
             Play Again
           </button>
+          <button
+            className="botao"
+            data-testid="btn-ranking"
+            type="button"
+            onClick={ () => (history.push('/ranking')) }
+          >
+            <span/>
+            <span/>
+            <span/>
+            <span/>
+            Ranking
+          </button>
         </section>
-        <button
-          className="botao"
-          data-testid="btn-ranking"
-          type="button"
-          onClick={ () => (history.push('/ranking')) }
-        >
-           <span/>
-           <span/>
-           <span/>
-           <span/>
-          Ranking
-        </button>
       </div>
     );
   }
