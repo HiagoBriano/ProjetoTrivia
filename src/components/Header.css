@@ -45,6 +45,7 @@
   justify-content: space-between;
   height: 100%;
   width: 100%;
+  padding-bottom: 5%;
 }
 
 .name-and-score p {
@@ -58,6 +59,7 @@
   text-transform: uppercase;
   letter-spacing: .8em;
   text-shadow: 0 0 21px #fff, 0 0 15px #fff;
+  padding-left: 10px;
 }
 
 .image-user {
