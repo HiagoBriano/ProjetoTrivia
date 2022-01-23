@@ -139,27 +139,29 @@ class Questions extends Component {
 
     return (
       <div className="pag-questions">
-        <h2 data-testid="question-category">{questions[counter].category}</h2>
-        <h3 data-testid="question-text">{questions[counter].question}</h3>
+        <h2 data-testid="question-category" class="question-category">{questions[counter].category}</h2>
+        <h3 data-testid="question-text" class="question-text">{questions[counter].question}</h3>
         <section data-testid="answer-options">
           {misturado.map((item, index) => (
-            <button
-              key={index}
-              type="button"
-              name={
-                item.certa ? validation : `wrong-answer-${index}`
-              }
-              data-testid={
-                item.certa ? validation : `wrong-answer-${index}`
-              }
-              disabled={btnDisabled}
-              className={resposta ? item.classe : ''}
-              onClick={
-                (e) => this.answerSelected(e)
-              }
-            >
-              {item.resposta}
-            </button>
+            <div class="choice-container">
+              <button
+                key={index}
+                type="button"
+                name={
+                  item.certa ? validation : `wrong-answer-${index}`
+                }
+                data-testid={
+                  item.certa ? validation : `wrong-answer-${index}`
+                }
+                disabled={btnDisabled}
+                className={resposta ? item.classe : 'choice-text'}
+                onClick={
+                  (e) => this.answerSelected(e)
+                }
+              >
+                {item.resposta}
+              </button>
+            </div>
           ))}
         </section>
       </div>
@@ -196,21 +198,26 @@ class Questions extends Component {
 
     return (
       <section>
-        {!haveOptions
-          ? (<p>Carregando</p>)
-          : (this.renderAnswers())}
-        {resposta
-          && (
-            <section>
+        <section class="container">
+          {!haveOptions
+            ? (<p>Carregando</p>)
+            : (
+              <div class="container-internal">
+                {this.renderAnswers()}
+              </div>
+            )}
+          {resposta
+            && (
               <button
+                class="btn-questions"
                 type="button"
                 data-testid="btn-next"
                 onClick={this.nextQuestion}
               >
                 Next
               </button>
-            </section>
-          )}
+            )}
+        </section>
 
 
         {timer <= 30 && timer && !resposta
