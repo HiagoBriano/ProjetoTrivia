@@ -139,28 +139,29 @@ class Questions extends Component {
 
     return (
       <div className="pag-questions">
-        <h2 className="text" data-testid="question-category">{questions[counter].category}</h2>
-        <h3 className="text" data-testid="question-text">{questions[counter].question}</h3>
+        <h2 data-testid="question-category" class="question-category">{questions[counter].category}</h2>
+        <h3 data-testid="question-text" class="question-text">{questions[counter].question}</h3>
         <section data-testid="answer-options">
           {misturado.map((item, index) => (
-            <button
-              key={index}
-              type="button"
-              name={
-                item.certa ? validation : `wrong-answer-${index}`
-              }
-              data-testid={
-                item.certa ? validation : `wrong-answer-${index}`
-              }
-              disabled={btnDisabled}
-              className={resposta ? item.classe : ''}
-              onClick={
-                (e) => this.answerSelected(e)
-              }
-              id='botao-questions'
-            >
-              {item.resposta}
-            </button>
+            <div class="choice-container">
+              <button
+                key={index}
+                type="button"
+                name={
+                  item.certa ? validation : `wrong-answer-${index}`
+                }
+                data-testid={
+                  item.certa ? validation : `wrong-answer-${index}`
+                }
+                disabled={btnDisabled}
+                className={resposta ? item.classe : 'choice-text'}
+                onClick={
+                  (e) => this.answerSelected(e)
+                }
+              >
+                {item.resposta}
+              </button>
+            </div>
           ))}
         </section>
       </div>
@@ -196,55 +197,64 @@ class Questions extends Component {
     } = this.state;
 
     return (
-      <section className="page-game">
-        {!haveOptions
-          ? (<p>Carregando</p>)
-          : (this.renderAnswers())}
-        {resposta
-          && (
-            <section>
+      <section>
+        <section class="container">
+          <section class="position-circular">
+            {timer <= 30 && timer && !resposta
+              ? (
+                <div class="circular">
+                  <div class="inner"></div>
+                  <div class="outer"></div>
+                  <div class="numb">
+                    {timer}
+                  </div>
+                  <div class="circle">
+                    <div class="dot">
+                      <span></span>
+                    </div>
+                    <div class="bar left">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="bar right">
+                      <div class="progress"></div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div class="circular danger">
+                  <div class="inner"></div>
+                  <div class="outer"></div>
+                  <div class="numb">
+                    {timer}
+                  </div>
+                </div>
+              )
+            }
+          </section>
+
+          {!haveOptions
+            ? (<p>Carregando</p>)
+            : (
+              <div class="container-internal">
+                {this.renderAnswers()}
+              </div>
+            )}
+          {resposta
+            && (
               <button
+                class="btn-questions"
                 type="button"
                 data-testid="btn-next"
                 onClick={this.nextQuestion}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Next
               </button>
-            </section>
-          )}
-          <center>
-        {timer <= 30 && timer && !resposta
-          ? (
-            <div class="circular">
-              <div class="inner"></div>
-              <div class="outer"></div>
-              <div class="numb">
-                {timer}
-              </div>
-              <div class="circle">
-                <div class="dot">
-                  <span></span>
-                </div>
-                <div class="bar left">
-                  <div class="progress"></div>
-                </div>
-                <div class="bar right">
-                  <div class="progress"></div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div class="circular danger">
-              <div class="inner"></div>
-              <div class="outer"></div>
-              <div class="numb">
-                {timer}
-              </div>
-            </div>
-          )
-        }
-        </center>
-
+            )}
+        </section>
 
       </section>
     );
