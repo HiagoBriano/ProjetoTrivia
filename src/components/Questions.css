@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 @import url('http://fonts.cdnfonts.com/css/open-24-display-st');
 
+.pag-questions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+#botao-questions {
+  margin: 5px;
+}
+
+.page-game {
+  display: block;
+  text-align: center;
+}
+
+.text {
+  color: #25B783;
+}
+
 .buttonGreen {
   border: 3px solid rgb(6, 240, 15);
   padding: 1.5rem;
@@ -178,6 +198,7 @@
   width: 100px;
   position: relative;
   font-family: "open 24 display st",sans-serif;
+  margin-top: 20px;
 }
 .circular .inner,
 .circular .outer,
