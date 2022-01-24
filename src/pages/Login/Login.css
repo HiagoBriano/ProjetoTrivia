@@ -17,6 +17,20 @@
   width: 600px;
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.login--logo {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 .login--container {
   border: none;
   border-radius: 5px;
@@ -201,6 +215,8 @@
   top: 0;
   right: 0;
   border: none;
+  margin-top: 20px;
+  margin-right: 15px;
 }
 
 .login--config-btn:hover {
