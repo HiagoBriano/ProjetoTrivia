@@ -1,33 +1,196 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 @import url('http://fonts.cdnfonts.com/css/open-24-display-st');
 
-.pag-questions {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 80px;
-}
-
-#botao-questions {
-  margin: 5px;
-}
-
-.page-game {
-  display: block;
-  text-align: center;
-}
-
-.text {
-  color: #25B783;
-}
-
 .buttonGreen {
   border: 3px solid rgb(6, 240, 15);
+  border-radius: 8px;
+  padding: 0.7rem;
+  width: 100%;
+  background-color: #28a745;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
 }
 
 .buttonRed {
   border: 3px solid red;
+  border-radius: 8px;
+  padding: 0.7rem;
+  width: 100%;
+  background-color: #dc3545;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
 }
+
+.container {
+  justify-content: center; 
+  align-items: center; 
+  max-width: 50rem;
+  margin: 0 auto; 
+  padding-top: 10%;
+}
+
+.container-internal {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+.choice-container {
+  display: flex; 
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 2.8rem; 
+  background-color: white;
+  border-radius: 8px;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5); 
+  transform: translateY(-0.1rem); 
+  transition: transform 150ms; 
+}
+
+.choice-text {
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  font-weight: 800;
+  background-color: #25B783;
+  color: #fff;
+}
+
+.question-category {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.question-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* Fonte do botão: https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda */
+
+.btn-questions {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background: none;
+  font-weight: 800;
+  font-family: "open 24 display st",sans-serif;
+  letter-spacing: .3em;
+  background-color: #6a6d6e;
+
+  width: 100px;
+  margin-top: 5px;
+}
+
+.btn-questions:hover:enabled {
+  background: #25B783;
+  color: #C638DB;
+  font-weight: bolder;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #C638DB,
+              0 0 25px #C638DB,
+              0 0 50px #C638DB,
+              0 0 100px #C638DB;
+}
+
+.btn-questions span {
+  position: absolute;
+  display: block;
+}
+
+.btn-questions:enabled span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #25B783);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.btn-questions:enabled span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #25B783);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.btn-questions:enabled span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #25B783);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.btn-questions:enabled span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #25B783);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
 
 /* https://www.codingnepalweb.com/circular-progress-bar-html-css-javascript/ */
 .circular {
@@ -35,7 +198,8 @@
   width: 100px;
   position: relative;
   font-family: "open 24 display st",sans-serif;
-  margin-top: 20px;
+  margin-top: -35px;
+  float: right;
 }
 .circular .inner,
 .circular .outer,
@@ -69,7 +233,7 @@
   z-index: 10;
   font-size: 35px;
   font-weight: 500;
-  color: #4158d0;
+  color: #C638DB;
 }
 .circular .bar {
   position: absolute;
@@ -88,7 +252,7 @@
 }
 .circle .bar .progress,
 .dot span {
-  background: #4158d0;
+  background: #25B783;
 }
 .circle .left .progress {
   z-index: 1;

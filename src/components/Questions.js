@@ -197,55 +197,64 @@ class Questions extends Component {
     } = this.state;
 
     return (
-      <section className="page-game">
-        {!haveOptions
-          ? (<p>Carregando</p>)
-          : (this.renderAnswers())}
-        {resposta
-          && (
-            <section>
+      <section>
+        <section class="container">
+          <section class="position-circular">
+            {timer <= 30 && timer && !resposta
+              ? (
+                <div class="circular">
+                  <div class="inner"></div>
+                  <div class="outer"></div>
+                  <div class="numb">
+                    {timer}
+                  </div>
+                  <div class="circle">
+                    <div class="dot">
+                      <span></span>
+                    </div>
+                    <div class="bar left">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="bar right">
+                      <div class="progress"></div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div class="circular danger">
+                  <div class="inner"></div>
+                  <div class="outer"></div>
+                  <div class="numb">
+                    {timer}
+                  </div>
+                </div>
+              )
+            }
+          </section>
+
+          {!haveOptions
+            ? (<p>Carregando</p>)
+            : (
+              <div class="container-internal">
+                {this.renderAnswers()}
+              </div>
+            )}
+          {resposta
+            && (
               <button
+                class="btn-questions"
                 type="button"
                 data-testid="btn-next"
                 onClick={this.nextQuestion}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Next
               </button>
-            </section>
-          )}
-          <center>
-        {timer <= 30 && timer && !resposta
-          ? (
-            <div class="circular">
-              <div class="inner"></div>
-              <div class="outer"></div>
-              <div class="numb">
-                {timer}
-              </div>
-              <div class="circle">
-                <div class="dot">
-                  <span></span>
-                </div>
-                <div class="bar left">
-                  <div class="progress"></div>
-                </div>
-                <div class="bar right">
-                  <div class="progress"></div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div class="circular danger">
-              <div class="inner"></div>
-              <div class="outer"></div>
-              <div class="numb">
-                {timer}
-              </div>
-            </div>
-          )
-        }
-        </center>
-
+            )}
+        </section>
 
       </section>
     );
