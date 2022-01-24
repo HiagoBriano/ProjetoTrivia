@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/projeto-trivia/static/css/main.38fe8184.chunk.css",
-    "main.js": "/projeto-trivia/static/js/main.2976927c.chunk.js",
-    "main.js.map": "/projeto-trivia/static/js/main.2976927c.chunk.js.map",
-    "runtime-main.js": "/projeto-trivia/static/js/runtime-main.f8589bed.js",
-    "runtime-main.js.map": "/projeto-trivia/static/js/runtime-main.f8589bed.js.map",
-    "static/js/2.1e7a1143.chunk.js": "/projeto-trivia/static/js/2.1e7a1143.chunk.js",
-    "static/js/2.1e7a1143.chunk.js.map": "/projeto-trivia/static/js/2.1e7a1143.chunk.js.map",
-    "index.html": "/projeto-trivia/index.html",
-    "precache-manifest.888a766d6acd11730e480c8658508cc6.js": "/projeto-trivia/precache-manifest.888a766d6acd11730e480c8658508cc6.js",
-    "service-worker.js": "/projeto-trivia/service-worker.js",
-    "static/css/main.38fe8184.chunk.css.map": "/projeto-trivia/static/css/main.38fe8184.chunk.css.map",
-    "static/js/2.1e7a1143.chunk.js.LICENSE.txt": "/projeto-trivia/static/js/2.1e7a1143.chunk.js.LICENSE.txt",
-    "static/media/engrenagem3.svg": "/projeto-trivia/static/media/engrenagem3.9c8463bf.svg",
-    "static/media/Header.css": "/projeto-trivia/static/media/token-viewer-background.0293dbef.png",
-    "static/media/trivia-01.png": "/projeto-trivia/static/media/trivia-01.8397b8e7.png"
+    "main.css": "/ProjetoTrivia/static/css/main.32091587.chunk.css",
+    "main.js": "/ProjetoTrivia/static/js/main.5bc646bd.chunk.js",
+    "main.js.map": "/ProjetoTrivia/static/js/main.5bc646bd.chunk.js.map",
+    "runtime-main.js": "/ProjetoTrivia/static/js/runtime-main.903fe903.js",
+    "runtime-main.js.map": "/ProjetoTrivia/static/js/runtime-main.903fe903.js.map",
+    "static/js/2.1e7a1143.chunk.js": "/ProjetoTrivia/static/js/2.1e7a1143.chunk.js",
+    "static/js/2.1e7a1143.chunk.js.map": "/ProjetoTrivia/static/js/2.1e7a1143.chunk.js.map",
+    "index.html": "/ProjetoTrivia/index.html",
+    "precache-manifest.7453152f652bdccda0a55203c0e22001.js": "/ProjetoTrivia/precache-manifest.7453152f652bdccda0a55203c0e22001.js",
+    "service-worker.js": "/ProjetoTrivia/service-worker.js",
+    "static/css/main.32091587.chunk.css.map": "/ProjetoTrivia/static/css/main.32091587.chunk.css.map",
+    "static/js/2.1e7a1143.chunk.js.LICENSE.txt": "/ProjetoTrivia/static/js/2.1e7a1143.chunk.js.LICENSE.txt",
+    "static/media/engrenagem3.svg": "/ProjetoTrivia/static/media/engrenagem3.9c8463bf.svg",
+    "static/media/Header.css": "/ProjetoTrivia/static/media/token-viewer-background.0293dbef.png",
+    "static/media/trivia-01.png": "/ProjetoTrivia/static/media/trivia-01.8397b8e7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8589bed.js",
+    "static/js/runtime-main.903fe903.js",
     "static/js/2.1e7a1143.chunk.js",
-    "static/css/main.38fe8184.chunk.css",
-    "static/js/main.2976927c.chunk.js"
+    "static/css/main.32091587.chunk.css",
+    "static/js/main.5bc646bd.chunk.js"
   ]
 }
