@@ -110,7 +110,7 @@ class Questions extends Component {
 
   prepareAnswers = (correct = '', incorrects = []) => {
     const respostas = [...incorrects, correct];
-
+    console.log(correct);
     const pronto = respostas.map((atual, index) => (
       ((respostas.length - 1) === index)
         ? {

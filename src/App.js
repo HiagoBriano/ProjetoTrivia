@@ -11,11 +11,11 @@ export default class App extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={ Login } />
-        <Route exact path="/jogo" component={ Game } />
-        <Route exact path="/config" component={ Settings } />
-        <Route exact path="/feedback" component={ Feedback } />
-        <Route exact path="/ranking" component={ Ranking } />
+        <Route exact path="/" component={Login} />
+        <Route exact path="/jogo" component={Game} />
+        <Route exact path="/config" component={Settings} />
+        <Route exact path="/feedback" component={Feedback} />
+        <Route exact path="/ranking" component={Ranking} />
       </Switch>
     );
   }

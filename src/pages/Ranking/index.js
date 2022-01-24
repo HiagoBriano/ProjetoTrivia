@@ -43,25 +43,24 @@ export default class Ranking extends Component {
                     }
                     {
                       index > 2
-                      ? <span>{`${index + 1}°`}</span>
+                      ? <span className="texto">{`${index + 1}°`}</span>
                       : null
                     }
-                    {/* <span>{`${index + 1}°`}</span> */}
                   </div>
                   <div className='tamanho-ranking'>
                     <img
                       src={picture}
                       alt="player"
                       className="ranking-foto"
-                      width="30px"
-                      height="30px"
+                      width="45px"
+                      height="45px"
                     />
                   </div>
                   <div className='tamanho-ranking'>
-                    <span data-testid={`player-name-${index}`}>{name}</span>
+                    <span className="texto" data-testid={`player-name-${index}`}>{name}</span>
                   </div>
                   <div className='tamanho-ranking'>
-                    <span data-testid={`player-score-${index}`}>{score}</span>
+                    <span className="texto" data-testid={`player-score-${index}`}>{score}</span>
                   </div>
                 </li>
               ))}

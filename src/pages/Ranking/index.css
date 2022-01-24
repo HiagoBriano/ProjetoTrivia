@@ -1,5 +1,5 @@
 .ranking-lista {
-  width: 600px;
+  width: 800px;
 }
 
 .ranking-lista span {
@@ -14,12 +14,16 @@
       text-stroke: 1px #C638DB;
 }
 
+.texto {
+  font-size: 29px;
+}
+
 .ranking-jogador {
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  height: 40px;
+  height: 60px;
 
   margin: 10px 10px 10px 10px;
 
