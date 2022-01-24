@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getToken, playerAssertions, playerPoints } from '../redux/actions';
 import { requestQuestionsApi } from '../services/triviApi';
 import './Questions.css';
+import Parser from 'html-react-parser';
 
 const validation = 'correct-answer';
 
@@ -139,8 +140,8 @@ class Questions extends Component {
 
     return (
       <div className="pag-questions">
-        <h2 className="text" data-testid="question-category">{questions[counter].category}</h2>
-        <h3 className="text" data-testid="question-text">{questions[counter].question}</h3>
+        <h2 className="text" data-testid="question-category">{Parser(questions[counter].category)}</h2>
+        <h3 className="text" data-testid="question-text">{Parser(questions[counter].question)}</h3>
         <section data-testid="answer-options">
           {misturado.map((item, index) => (
             <button
@@ -159,7 +160,7 @@ class Questions extends Component {
               }
               id='botao-questions'
             >
-              {item.resposta}
+              {Parser(item.resposta)}
             </button>
           ))}
         </section>
